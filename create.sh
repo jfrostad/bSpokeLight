@@ -4,16 +4,35 @@ cd /home/frostafarian/Documents/code/personal/bSpokeLight/
 #create the firmware
 sudo docker run --rm -it -v $PWD:/home bspoke bSpokeLight \
 	 --offset -7 \
-	 --rotation 8 \
+	 --rotation -5 \
      --output fware.bin \
-     imgs/west_world_goofy.jpg 20 imgs/molly.jpg 10 imgs/johnny_5_goofy.jpg 20 \
-     imgs/walle_eve_pix.png 20 imgs/cyclops_robot.jpg 20 imgs/ex_machina_colorful.jpg 10 \
-     imgs/terminator_tall.jpg 20 imgs/term_cartoon.jp 20
+     imgs/
 
-     #create the firmware
+ #create the firmware
 sudo docker run --rm -it -v $PWD:/home bspoke bSpokeLight \
-	 --offset -8 \
-	 --rotation 8 \
+	 --offset -2 \
+	 --rotation 12.5 \
      --output fware.bin \
-     imgs/c3po_pixel.jpg 20 imgs/human_robot_handshake.jpg 20 imgs/terminator_pink.jpg
+     imgs/molly_color.jpg 40 imgs/handshake.jpg 20 imgs/term_eyes.jpg 20 \
+     imgs/ww_composite.jpg 20 imgs/roy_color.jpg 20 imgs/r_owl.jpg 40 \
+     imgs/mat_smith.jpg 30 imgs/em_txt.jpg 60 
+
+ #haley firmware
+ sudo docker run --rm -it -v $PWD:/home bspoke bSpokeLight \
+	 --offset -2 \
+	 --rotation 12.5 \
+     --output hm_fware.bin \
+     imgs/haley/pin_princess.jpeg 60 imgs/haley/ig_min.png 30 imgs/haley/c3po_pixel.jpg 60 \
+     imgs/haley/j5.jpg 30 imgs/haley/eve_min.jpg 30 imgs/haley/pin_princess.jpeg 60 \
+     imgs/haley/giant.jpg 30 imgs/haley/sonny.jpg 30 
+
+  #ray firmware
+   sudo docker run --rm -it -v $PWD:/home bspoke bSpokeLight \
+	 --offset -2 \
+	 --rotation 12.5 \
+     --output rz_fware.bin \
+     imgs/ray/1-okeydoke.jpg 15 imgs/ray/2-flames.jpg 15 imgs/ray/3-map.jpg 15 \
+     imgs/ray/4-rainier.jpg 15 imgs/ray/5-wave.jpg 15 imgs/ray/6-spaceneedle.jpg 15 \
+     imgs/ray/7-swirl.jpg 15 imgs/ray/8-dragon.jpg 15
+
  sudo stcgal -P stc12 fware.bin
